@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flamora Links</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <meta name="description" content="Connect with Flamora on social media" />
+    <meta property="og:title" content="Flamora Links" />
+    <meta
+      property="og:description"
+      content="Connect with Flamora on social media"
+    />
+    <meta property="og:image" content="./flamora.svg" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f5eee6 0%, #f3d7ca 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 680px;
+        width: 100%;
+        padding: 40px;
+        background: rgba(245, 238, 230, 0.8);
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(116, 94, 89, 0.15),
+          0 2px 6px rgba(116, 94, 89, 0.1);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .profile {
+        text-align: center;
+        margin-bottom: 40px;
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      .profile-pic {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 4px solid #f3d7ca;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 12px rgba(116, 94, 89, 0.2);
+      }
+
+      .profile-pic:hover {
+        transform: scale(1.05);
+      }
+
+      .links {
+        display: grid;
+        gap: 16px;
+      }
+
+      .link-card {
+        background: #f3d7ca;
+        padding: 18px 24px;
+        border-radius: 16px;
+        text-decoration: none;
+        color: #745e59;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(116, 94, 89, 0.1);
+        position: relative;
+        overflow: hidden;
+        animation: fadeInUp 0.6s ease-out;
+        animation-fill-mode: both;
+      }
+
+      .link-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.2) 50%,
+          transparent 100%
+        );
+        transform: translateX(-100%);
+        transition: transform 0.6s ease;
+      }
+
+      .link-card:hover::before {
+        transform: translateX(100%);
+      }
+
+      .link-card:hover {
+        transform: translateY(-3px);
+        background: #f5eee6;
+        box-shadow: 0 6px 12px rgba(116, 94, 89, 0.2);
+      }
+
+      .link-card i {
+        font-size: 24px;
+        width: 24px;
+        text-align: center;
+        color: #745e59;
+        transition: transform 0.3s ease;
+      }
+
+      .link-card:hover i {
+        transform: scale(1.1);
+      }
+
+      .link-card span {
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.3px;
+      }
+
+      /* Stagger the animations for each link */
+      .link-card:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+      .link-card:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      .link-card:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .link-card:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+      .link-card:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 24px;
+        }
+
+        .link-card {
+          padding: 16px 20px;
+        }
+
+        .profile-pic {
+          width: 130px;
+          height: 130px;
+        }
+      }
+
+      /* Add styles for footer */
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #745e59;
+        font-size: 14px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <img src="./flamora.svg" alt="Profile Picture" class="profile-pic" />
+      </div>
+
+      <div class="links">
+        <a href="https://wa.me/yournumber" class="link-card">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <a href="https://facebook.com/yourprofile" class="link-card">
+          <i class="fab fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+
+        <a href="https://instagram.com/yourprofile" class="link-card">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://tiktok.com/@yourprofile" class="link-card">
+          <i class="fab fa-tiktok"></i>
+          <span>TikTok</span>
+        </a>
+
+        <a href="your-website-url" class="link-card">
+          <i class="fas fa-globe"></i>
+          <span>Website</span>
+        </a>
+      </div>
+    </div>
+
+    <footer>© All Rights Reserved - Flamora 2025</footer>
+  </body>
+</html>
